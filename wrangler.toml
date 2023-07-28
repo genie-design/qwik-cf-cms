@@ -1,0 +1,21 @@
+compatibility_date = "2023-05-18"
+name = "qwik-cf-cms"
+workers_dev = true
+
+# Enter your account id
+# This can be found at https://dash.cloudflare.com/ --> Workers & Pages
+#  --> Overview, then in the right sidebar
+account_id = "ed64feca849fbe1d6fa76329e17dd416"
+
+# Run the `wrangler kv:namespace create genie` command and copy the id below
+# Run the `wrangler kv:namespace create genie --preview` command and copy the preview_id below
+# Only update the preview_id and id, leave the binding name as "KVDATA"
+kv_namespaces = [
+  { binding = "KVDATA", preview_id="02c7faa7ab69421faad2b9088e2f6680", id = "185fe56601074b27a05f315aede3756f" }
+]
+
+# Run the `wrangler d1 create genie` command and copy the id below
+[[d1_databases]]
+binding = "D1DATA"
+database_name = "genie"
+database_id = "d96bc63a-cee0-468f-b63f-48186f9ece11"
